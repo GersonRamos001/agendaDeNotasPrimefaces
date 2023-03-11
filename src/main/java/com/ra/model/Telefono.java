@@ -50,4 +50,33 @@ public class Telefono implements Serializable {
         this.numero = numero;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 67 * hash + this.codigo;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Telefono other = (Telefono) obj;
+        return this.codigo == other.codigo;
+    }
+
+    @Override
+    public String toString() {
+        return "Telefono{" + "codigo=" + codigo + '}';
+    }
+    
+    
+
 }
