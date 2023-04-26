@@ -29,4 +29,6 @@ public interface UsuarioFacadeLocal {
 
     int count();
     
+    Usuario iniciarSesion(Usuario us);
+    
 }
